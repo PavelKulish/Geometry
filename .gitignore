@@ -1,4 +1,4 @@
 *.o
-/main.cpp
+main*
 res*
 
