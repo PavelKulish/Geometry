@@ -1,29 +1,16 @@
 #include "Triangle.h"
-Triangle::Triangle(Point X, Point Y, Point Z) {
-    this->A = X;
-    this->B = Y;
-    this->C = Z;
-}
 
-Triangle::~Triangle() {
+bool is_belonged(const Point& X, const Triangle& triangle) {
+    const Vector2 v1 = triangle.B - triangle.A;
+    const Vector2 v2 = triangle.C - triangle.A;
+    const Vector2 r = X - triangle.A;
 
-}
+    const float det = Determinant(v1, v2);
+    const float det_x = Determinant(r, v2);
+    const float det_y = Determinant(v1, r);
 
-float Triangle::len_side(const Point& X, const Point& Y) {
-    return std::sqrt((X.x - Y.x) * (X.x - Y.x) + (X.y - Y.y) * (X.y - Y.y));
-}
+    const float x = det_x / det;
+    const float y = det_y / det;
 
-float Triangle::square(const Point& X, const Point& Y, const Point& Z) {
-    float AB = len_side(this->A, this->B);
-    float AC = len_side(this->A, this->C);
-    float BC = len_side(this->C, this->B);
-    float half_per = 0.5 * (AB + AC + BC);
-    return std::sqrt(half_per * (half_per - AB) * (half_per - AC) * (half_per - BC));
-}
-
-bool Triangle::is_belong(const Point& X) {
-    if ((square(X, this->A, this->B) + square(X, this->B, this->C) + square(X, this->A, this->C)) == square(this->A, this->B, this->C)) {
-        return true;
-    }
-    return false;
+    return ((x >= 0) && (y >= 0) && (x + y <= 1));
 }

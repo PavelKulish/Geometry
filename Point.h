@@ -1,14 +1,8 @@
-#ifndef POINT_H_
-#define POINT_H_
-#include <iostream>
+#ifndef GEOMETRY_POINT_H_
+#define GEOMETRY_POINT_H_
+
 struct Point {
     float x, y;
-
-    Point& operator=(const Point& other) {
-        x = other.x;
-        y = other.y;
-        return *this;
-    }
 };
 
-#endif // POINT_H_
+#endif // GEOMETRY_POINT_H_

@@ -1,12 +1,15 @@
 #include "Point.h"
 #include "Triangle.h"
+#include "Vector2.h"
+#include <iostream>
+
 
 int main() {
     Point A = {0.0, 0.0};
-    Point B = {3.0, 0.0};
-    Point C = {0.0, 0.4};
-    Point P = {10.5, 0.5};
+    Point B = {13.0, 0.0};
+    Point C = {0.0, 14.14};
+    Point P = {1.5, 1.5};
 
-    Triangle ABC(A, B, C);
-    std::cout << std::boolalpha << ABC.is_belong(P) << std::endl;
+    Triangle triangle{A, B, C};
+    std::cout << std::boolalpha << is_belonged(P, triangle) << std::endl;
 }
