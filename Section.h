@@ -3,12 +3,12 @@
 #include "Point.h"
 #include "Vector2.h"
 #include "Line.h"
+#include "Intersection.h"
 
 struct Section {
     Point A;
     Point B;
 };
-bool point_on_section(const Point& P, const Section& O);
 
-Point section_intersection(const Section& O, const Section& P);
+std::optional<Intersection> section_intersection(const Section& O, const Section& P);
 #endif // GEOMETRY_SECTION_H_INCLUDED

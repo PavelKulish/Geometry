@@ -2,6 +2,7 @@
 #define GEOMETRY_LINE_H_INCLUDED
 #include "Point.h"
 #include "Vector2.h"
+#include "Intersection.h"
 
 struct Line {
     Point A;
@@ -10,5 +11,5 @@ struct Line {
 
 //float Determinant2(float a11, float a12, float a21, float a22);
 
-Point line_intersection(const Line& K, const Line& L);
+std::optional<Intersection> line_intersection(const Line& K, const Line& L);
 #endif // GEOMETRY_LINE_H_INCLUDED
