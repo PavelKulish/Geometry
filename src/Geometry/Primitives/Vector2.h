@@ -9,6 +9,6 @@ struct Vector2 {
 Vector2 operator-(const Point& X, const Point& Y);
 
 
-float Determinant(const Vector2& v1, const Vector2& v2);
+
 
 #endif // VECTOR2_H_

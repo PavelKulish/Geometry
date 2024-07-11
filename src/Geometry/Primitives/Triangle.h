@@ -2,7 +2,6 @@
 #define TRIANGLE_H_
 
 #include "Point.h"
-#include "Vector2.h"
 
 
 struct Triangle {
