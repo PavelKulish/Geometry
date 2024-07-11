@@ -1,4 +1,4 @@
-#include "Section.h"
+#include "SectionsIntersection.h"
 
 
 std::optional<Intersection> section_intersection(const Section& O, const Section& P) {

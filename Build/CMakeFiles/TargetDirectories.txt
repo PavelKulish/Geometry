@@ -1,0 +1,6 @@
+C:/Projects/SummerPractise/Geometry/Build/CMakeFiles/MAIN.dir
+C:/Projects/SummerPractise/Geometry/Build/CMakeFiles/edit_cache.dir
+C:/Projects/SummerPractise/Geometry/Build/CMakeFiles/rebuild_cache.dir
+C:/Projects/SummerPractise/Geometry/Build/src/CMakeFiles/geometry.dir
+C:/Projects/SummerPractise/Geometry/Build/src/CMakeFiles/edit_cache.dir
+C:/Projects/SummerPractise/Geometry/Build/src/CMakeFiles/rebuild_cache.dir

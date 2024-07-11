@@ -1,4 +1,4 @@
-#include "Triangle.h"
+#include "IsPointbelonged.h"
 
 bool is_belonged(const Point& X, const Triangle& triangle) {
     const Vector2 v1 = triangle.B - triangle.A;
