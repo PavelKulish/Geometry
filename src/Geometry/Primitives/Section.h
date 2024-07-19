@@ -3,9 +3,10 @@
 
 #include "Point.h"
 
+template<std::size_t n>
 struct Section {
-    Point A;
-    Point B;
+    Point<n> A;
+    Point<n> B;
 };
 
 #endif // GEOMETRY_SECTION_H_INCLUDED

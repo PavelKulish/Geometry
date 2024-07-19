@@ -1,9 +1,9 @@
 #include "SectionsIntersection.h"
 
 
-std::optional<Intersection> section_intersection(const Section& O, const Section& P) {
-    const Line l1{O.A, O.B - O.A};
-    const Line l2{P.A, P.B - P.A};
+std::optional<Intersection> section_intersection(const Section<2>& O, const Section<2>& P) {
+    const Line<2> l1{O.A, O.B - O.A};
+    const Line<2> l2{P.A, P.B - P.A};
 
     const auto intersection = line_intersection(l1, l2);
 

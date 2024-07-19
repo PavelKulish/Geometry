@@ -5,7 +5,7 @@
 
 
 struct Triangle {
-    Point A, B, C;
+    Point<2> A, B, C;
 };
 
 #endif // TRIANGLE_H_

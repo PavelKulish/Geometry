@@ -1,8 +1,13 @@
 #ifndef DETERMINANT_H_INCLUDED
 #define DETERMINANT_H_INCLUDED
 
-#include "Geometry/Primitives/Vector2.h"
+#include "Geometry/Primitives/Vector.h"
+#include "Matrix.h"
 
-float Determinant(const Vector2& v1, const Vector2& v2);
+float Determinant(const Matrix<1, 1>& matr);
+
+template<std::size_t M, std::size_t N>
+float Determinant(const Matrix<M, N>& matr);
+
 
 #endif // DETERMINANT_H_INCLUDED
