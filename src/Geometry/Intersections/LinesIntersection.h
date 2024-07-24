@@ -1,9 +1,7 @@
-#ifndef LINESINTERSECTION_H_INCLUDED
-#define LINESINTERSECTION_H_INCLUDED
+#ifndef LINESINTERSECTION_H_
+#define LINESINTERSECTION_H_
 
-#include "Geometry/Primitives/Vector.h"
 #include "Geometry/LinAlg/Determinant.h"
-#include "Geometry/LinAlg/Matrix.h"
 #include "Geometry/Primitives/Line.h"
 #include "Intersection.h"
 

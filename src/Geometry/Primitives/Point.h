@@ -1,23 +1,23 @@
-#ifndef GEOMETRY_POINT_H_
-#define GEOMETRY_POINT_H_
+#ifndef POINT_H_
+#define POINT_H_
 
 #include <array>
 
+#include "Vector.h"
+
 template<std::size_t n>
-class Point {
-    std::array<float, n> data_;
-public:
-     Point();
-     Point(const std::array<float, n>& data);
-
-     float operator[](std::size_t index) const;
-     float& operator[](std::size_t index);
-     const std::array<float, n>& data() const;
-
-     float x() const;
-     float y() const;
-     float z() const;
+struct Point {
+    Vector<n> r0;
 };
 
+
+template<std::size_t d>
+Vector<d> operator-(const Point<d>& p1, const Point<d>& p2) {
+    Vector<d> result;
+	for(std::size_t i = 0; i < d; ++i){
+      result[i] = p1.r0[i] - p2.r0[i];
+    }
+    return result;
+}
 
 #endif // GEOMETRY_POINT_H_

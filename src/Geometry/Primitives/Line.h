@@ -1,5 +1,5 @@
-#ifndef GEOMETRY_LINE_H_INCLUDED
-#define GEOMETRY_LINE_H_INCLUDED
+#ifndef LINE_H_
+#define LINE_H_
 
 #include "Point.h"
 #include "Vector.h"
