@@ -13,11 +13,7 @@ struct Point {
 
 template<std::size_t d>
 Vector<d> operator-(const Point<d>& p1, const Point<d>& p2) {
-    Vector<d> result;
-	for(std::size_t i = 0; i < d; ++i){
-      result[i] = p1.r0[i] - p2.r0[i];
-    }
-    return result;
+    return p2.r0 - p1.r0;
 }
 
 #endif // GEOMETRY_POINT_H_

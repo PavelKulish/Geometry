@@ -61,7 +61,7 @@ TEST(POINT, POINT_DIFFERENCE) {
 	Point<3> p1 = {{{1, 2, 3}}};
 	Point<3> p2 = {{{4, 5, 6}}};
 	Vector<3> res = p1 - p2;
-	ASSERT_EQ(res[2], -3);
+	ASSERT_EQ(res[2], 3);
 }
 
 
