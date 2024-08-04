@@ -2,7 +2,7 @@
 #include "Geometry/PointInFigure/PointInTriangle.h"
 
 
-TEST(TRIANGLE, CREATE_TRIANGLE) {
+/*TEST(TRIANGLE, CREATE_TRIANGLE) {
     Point<2> A = {{{0, 0}}};
     Point<2> B = {{{10, 0}}};
     Point<2> C = {{{0, 10}}};

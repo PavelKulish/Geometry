@@ -1,0 +1,5 @@
+add_test([=[VECTOR.XYZ_VECTOR]=]  C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests/run_test_vector.exe [==[--gtest_filter=VECTOR.XYZ_VECTOR]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[VECTOR.XYZ_VECTOR]=]  PROPERTIES WORKING_DIRECTORY C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[POINT.POINT_DIFFERENCE]=]  C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests/run_test_vector.exe [==[--gtest_filter=POINT.POINT_DIFFERENCE]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[POINT.POINT_DIFFERENCE]=]  PROPERTIES WORKING_DIRECTORY C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  run_test_vector_TESTS VECTOR.XYZ_VECTOR POINT.POINT_DIFFERENCE)

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests/run_test_intersection[1]_tests.cmake")
+  include("C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests/run_test_intersection[1]_tests.cmake")
+else()
+  add_test(run_test_intersection_NOT_BUILT run_test_intersection_NOT_BUILT)
+endif()

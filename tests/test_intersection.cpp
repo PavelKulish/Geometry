@@ -2,10 +2,10 @@
 #include "Geometry/Intersections/SectionsIntersection.h"
 
 TEST(INTERSECTIONS, LINES_INTERSECTION) {
-    Point<2> A{{{0.0, 0.0}}};
-    Point<2> B{{{1.0, 1.0}}};
-    Point<2> C{{{1.0, 1.0}}};
-    Point<2> D{{{4.0, 0.0}}};
+    Point<2> A{{{{0.0, 0.0}}}};
+    Point<2> B{{{{1.0, 1.0}}}};
+    Point<2> C{{{{1.0, 1.0}}}};
+    Point<2> D{{{{4.0, 0.0}}}};
 
     Vector<2> vk = A - B;
     Vector<2> vl = C - D;
@@ -18,10 +18,10 @@ TEST(INTERSECTIONS, LINES_INTERSECTION) {
 }
 
 TEST(INTERSECTIONS, SECTIONS_INTERSECTION) {
-    Point<2> A{{{0.0, 0.0}}};
-    Point<2> B{{{1.0, 1.0}}};
-    Point<2> C{{{1.0, 1.0}}};
-    Point<2> D{{{4.0, 0.0}}};
+    Point<2> A{{{{0.0, 0.0}}}};
+    Point<2> B{{{{1.0, 1.0}}}};
+    Point<2> C{{{{1.0, 1.0}}}};
+    Point<2> D{{{{4.0, 0.0}}}};
 
     Section<2> K{A,B};
     Section<2> L{C, D};

@@ -5,9 +5,9 @@ bool is_belonged(const Point<2>& X, const Triangle& triangle) {
     const Vector<2> v2 = triangle.C - triangle.A;
     const Vector<2> r = X - triangle.A;
 
-    const Matrix<2, 2> A{{v1, v2}};
-    const Matrix<2, 2> B{{r, v2}};
-    const Matrix<2, 2> C{{v1, r}};
+    const Matrix<2, 2> A{{v1.data_, v2.data_}};
+    const Matrix<2, 2> B{{r.data_, v2.data_}};
+    const Matrix<2, 2> C{{v1.data_, r.data_}};
 
     const float det = Determinant(A);
     const float det_x = Determinant(B);
