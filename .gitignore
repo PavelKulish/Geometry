@@ -2,3 +2,5 @@
 res*
 Build*
 *.exe
+*.idea
+cmake-build-debug
