@@ -4,3 +4,4 @@ Build*
 *.exe
 *.idea
 cmake-build-debug
+*.swp
