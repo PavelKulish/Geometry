@@ -1,5 +1,0 @@
-add_test([=[INTERSECTIONS.LINES_INTERSECTION]=]  C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests/run_test_intersection.exe [==[--gtest_filter=INTERSECTIONS.LINES_INTERSECTION]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[INTERSECTIONS.LINES_INTERSECTION]=]  PROPERTIES WORKING_DIRECTORY C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[INTERSECTIONS.SECTIONS_INTERSECTION]=]  C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests/run_test_intersection.exe [==[--gtest_filter=INTERSECTIONS.SECTIONS_INTERSECTION]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[INTERSECTIONS.SECTIONS_INTERSECTION]=]  PROPERTIES WORKING_DIRECTORY C:/Projects/SummerPractise/Geometry/cmake-build-debug/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  run_test_intersection_TESTS INTERSECTIONS.LINES_INTERSECTION INTERSECTIONS.SECTIONS_INTERSECTION)
