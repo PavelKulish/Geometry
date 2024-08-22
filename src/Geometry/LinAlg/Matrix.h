@@ -1,6 +1,7 @@
 #ifndef GEOMETRY_MATRIX_H_INCLUDED
 #define GEOMETRY_MATRIX_H_INCLUDED
 
+#include <iostream>
 #include <array>
 
 template<std::size_t M, std::size_t N>
@@ -16,6 +17,8 @@ public:
             }
         }
     }
+
+    Matrix<M - 1, N - 1> submatrix(std::size_t str, std::size_t col) const;
 
     float operator()(const std::size_t i) const {
          return data_[i];
@@ -33,6 +36,19 @@ public:
         return data_;
     }
 };
+
+template<std::size_t M, std::size_t N>
+std::ostream& operator<<(std::ostream& os, const Matrix<M,N>& A) {
+    for(std::size_t i = 0; i < M * N; ++i){
+        if (i == M * N - 1) {
+            os << A(i) << std::endl;
+        }
+        else {
+            os << A(i) << " ";
+        }
+    }
+    return os;
+}
 
 template<std::size_t M, std::size_t N>
 Matrix<M, N> operator+(const Matrix<M, N>& A, const Matrix<M, N>& B) {
@@ -98,6 +114,25 @@ Matrix<N, M> transponse(const Matrix<M, N>& A) {
 	    for(std::size_t j = 0; j < N; ++j) {
             result(j, i) = A(i, j);
         }
+    }
+    return result;
+}
+
+template<std::size_t M, std::size_t N>
+Matrix<M - 1, N - 1> Matrix<M, N>::submatrix(std::size_t str, std::size_t col) const {
+    Matrix<M - 1, N - 1> result;
+    for (std::size_t i = 0, count_i = 0; i < M; ++i) {
+        if (i == str) {
+            continue;
+        }
+        for (std::size_t j = 0, count_j = 0; j < N; ++j) {
+            if (j == col) {
+                continue;
+            }
+            result(count_i * (N - 1) + count_j) = data_[i * N + j];
+            count_j++;
+        }
+        count_i++;
     }
     return result;
 }

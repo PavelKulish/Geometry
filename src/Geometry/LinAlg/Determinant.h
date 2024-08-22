@@ -11,16 +11,7 @@ float Determinant(const Matrix<M, M>& matr) {
     float result = 0;
     int multiplier = 1;
     for (std::size_t i = 0; i < M; ++i) {
-        Matrix<M - 1, M - 1> buffer;
-        for (std::size_t j = 1; j < M; ++j) {
-            std::size_t col_buffer = 0;
-            for (std::size_t k = 0; k < M; ++k) {
-                if (k == i) continue;
-                buffer((j - 1) * (M - 1) + col_buffer) = matr(j * M + k);
-                col_buffer++;
-            }
-        }
-
+        Matrix<M - 1, M - 1> buffer = matr.submatrix(0, i);
         result += multiplier * matr(i) * Determinant(buffer);
         multiplier *= -1;
     }

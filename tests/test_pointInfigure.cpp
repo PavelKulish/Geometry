@@ -1,21 +1,24 @@
 #include "gtest/gtest.h"
-#include "Geometry/PointInFigure/PointInTriangle.h"
+#include "Geometry/PointInFigure/PointInSimplex.h"
 
 
-/*TEST(TRIANGLE, CREATE_TRIANGLE) {
-    Point<2> A = {{{0, 0}}};
-    Point<2> B = {{{10, 0}}};
-    Point<2> C = {{{0, 10}}};
-    Triangle ABC{A, B, C};
-    ASSERT_EQ(ABC.B.r0.x(), 10);
-    ASSERT_EQ(ABC.C.r0.y(), 10);
+TEST(SIMPEX, CREATE_SIMPLEX) {
+    Point<2> X{{{{1.5, 1.5}}}};
+    Simplex<2> simplex{{{
+        {{{{0, 0}}}},
+        {{{{2, 0}}}},
+        {{{{0, 2}}}}
+    }}};
+    ASSERT_EQ(simplex.data_[0], 0);
+    ASSERT_EQ(simplex.data_[2], 2);
 }
 
 TEST(TRIANGLE, POINT_IN_TRIANGLE) {
-    Point<2> A = {{{0, 0}}};
-    Point<2> B = {{{10, 0}}};
-    Point<2> C = {{{0, 10}}};
-    Point<2> D = {{{1, 1}}};
-    Triangle ABC{A, B, C};
-    ASSERT_EQ(is_belonged(D, ABC), true);
+    Point<2> X{{{{0.5, 0.5}}}};
+    Simplex<2> simplex{{{
+        {{{{0, 0}}}},
+        {{{{2, 0}}}},
+        {{{{0, 2}}}}
+    }}};
+    ASSERT_EQ(is_belonged(X, simplex), true);
 }
